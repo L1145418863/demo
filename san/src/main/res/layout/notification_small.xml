@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/notification_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/notification_icon"
+        android:text="歌曲名"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_name"
+        android:layout_toRightOf="@id/notification_icon"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/notification_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="#50FF"
+            android:padding="5dp"
+            android:text="上" />
+
+        <TextView
+            android:id="@+id/notification_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notification_name"
+            android:background="#500F"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="开" />
+
+        <TextView
+            android:id="@+id/notification_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="#50FF"
+            android:padding="5dp"
+            android:text="下" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/notification_progress"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignBottom="@id/notification_icon"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:progressDrawable="@drawable/progress_color"
+        android:layout_toRightOf="@id/notification_icon" />
+
+</RelativeLayout>

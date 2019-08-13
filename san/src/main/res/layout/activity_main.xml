@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".activity.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="closeActivity"
+        android:text="关闭"/>
+
+    <TextView
+        android:id="@+id/btn_bind"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sp1"
+        android:gravity="center"
+        android:onClick="BinderService"
+        android:text="绑定Service"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_jump"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_sp2"
+        android:gravity="center"
+        android:text="跳"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintCircle="@id/btn_bind"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="75dp" />
+
+</android.support.constraint.ConstraintLayout>

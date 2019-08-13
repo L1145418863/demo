@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/floating_close"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/floating_head"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/floating_close"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/floating_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="74dp"
+        android:layout_toRightOf="@id/floating_head"
+        android:maxLines="1"
+        android:minLines="1"
+        android:text="沪指三连阳长夜指数涨0.8%..."
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/floating_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floating_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/floating_head"
+        android:text="00:10 / 06:05"
+        android:textColor="#ffe2b080"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/floating_start_btn"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher" />
+
+    <com.bossknow.android.san.music.util.CircularProgressBar
+        android:id="@+id/floating_circular"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp" />
+
+</RelativeLayout>

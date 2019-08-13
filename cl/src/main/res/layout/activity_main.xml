@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--链 等分-->
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="#000"
+            app:layout_constraintEnd_toStartOf="@id/t2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/t3"
+            app:layout_constraintStart_toEndOf="@+id/t1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/t2"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--链 权重-->
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="#00F"
+            app:layout_constraintEnd_toStartOf="@id/t5"
+            app:layout_constraintHorizontal_weight="9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/t2" />
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="#F00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/t4"
+            app:layout_constraintTop_toBottomOf="@id/t2" />
+        <!--比较好玩的圆心定位-->
+        <TextView
+            android:id="@+id/t6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/sp2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/t4" />
+
+        <TextView
+            android:id="@+id/t7"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sp1"
+            app:layout_constraintCircle="@id/t6"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="50dp" />
+        <!--宽高比
+            重要属性app:layout_constraintDimensionRatio=""
+            属性内可填
+                ①任意数字   相当于任意数字:1
+                ②比值       layout_constraintDimensionRatio=”2:1”方法，对于这个控件来说，其宽高比为2:1
+                ③W和H加比值 示例 W,2:1  相当于宽度和高度比值2:1-->
+        <TextView
+            android:id="@+id/t8"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:gravity="center"
+            android:text="T8"
+            android:textColor="#FFF"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/t6" />
+
+        <EditText
+            android:id="@+id/ed1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:hint="向T8中输入数字"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/t4" />
+
+        <!--偏移量-->
+
+        <TextView
+            android:id="@+id/t9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:padding="5dp"
+            android:text="位置在屏幕宽度的25%处"
+            android:textColor="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/t8" />
+        <!--基线定位-->
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/t9"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:background="#FFF"
+            android:text="基线定位" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/b1"
+            app:layout_constraintStart_toEndOf="@id/b1"
+            android:background="#FFF"
+            android:text="基线定位" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

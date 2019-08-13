@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Main2Activity">
+
+    <ImageView
+        android:id="@+id/music_image"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@drawable/btn_sp1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <SeekBar
+        android:id="@+id/music_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="60dp"
+        android:minHeight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/music_image" />
+
+    <TextView
+        android:id="@+id/music_start"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#000"
+        android:gravity="center"
+        android:text="开"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/music_image"
+        app:layout_constraintEnd_toEndOf="@+id/music_image"
+        app:layout_constraintStart_toStartOf="@+id/music_image"
+        app:layout_constraintTop_toTopOf="@+id/music_image" />
+
+    <TextView
+        android:id="@+id/music_previous"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/btn_sp1"
+        android:gravity="center"
+        android:text="上"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/music_start"
+        app:layout_constraintEnd_toStartOf="@+id/music_image"
+        app:layout_constraintTop_toTopOf="@+id/music_start" />
+
+    <TextView
+        android:id="@+id/music_next"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/btn_sp1"
+        android:gravity="center"
+        android:text="下"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/music_start"
+        app:layout_constraintStart_toEndOf="@id/music_image"
+        app:layout_constraintTop_toTopOf="@+id/music_start" />
+
+    <TextView
+        android:id="@+id/music_sent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/music_seekbar"
+        app:layout_constraintEnd_toStartOf="@+id/music_seekbar"
+        app:layout_constraintTop_toTopOf="@+id/music_seekbar" />
+
+    <TextView
+        android:id="@+id/music_total_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/music_seekbar"
+        app:layout_constraintStart_toEndOf="@+id/music_seekbar"
+        app:layout_constraintTop_toTopOf="@+id/music_seekbar" />
+
+    <TextView
+        android:id="@+id/music_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/music_seekbar"
+        app:layout_constraintEnd_toEndOf="@+id/music_start"
+        app:layout_constraintStart_toStartOf="@+id/music_start"
+        app:layout_constraintTop_toBottomOf="@+id/music_image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/music_seekbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/service_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="service信息" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/musi_floating_layout" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerInside"
+        android:onClick="FinishMain2"
+        android:src="@mipmap/ic_launcher"/>
+
+</android.support.constraint.ConstraintLayout>

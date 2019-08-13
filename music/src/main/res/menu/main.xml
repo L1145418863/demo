@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:title="搜索"
+        android:id="@+id/search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/search_view"
+        app:actionViewClass="android.widget.SearchView"
+        />
+    <item
+        android:id="@+id/play_mode"
+        android:title="更多"
+        app:showAsAction="always"
+        android:icon="@drawable/ordered"
+        app:actionProviderClass="com.wu.test.MyActionProvider"
+        />
+
+</menu>

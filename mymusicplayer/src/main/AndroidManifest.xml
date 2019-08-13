@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lzg.musicplayer">
+
+    <uses-permission android:name="android.permission.INTERNET " />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <application>
+        <receiver android:name=".HeadsetReceiver" />
+        <service android:name=".MusicPlayerService">
+            <intent-filter>
+                <!-- 用来启动服务的Intent -->
+                <action android:name="com.lzg.musicplayer.MusicPlayerService" />
+                <category android:name="android.intent.category.default" />
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="#000"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"/>
+    <ImageView
+        android:id="@+id/notification_icon2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通知头"
+        android:textColor="#0ff"
+       android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/notification_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#FF0"
+        android:text="进度"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/notification_title"/>
+
+    <ProgressBar
+        android:id="@+id/notification_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_progress"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:max="100"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notification_progressbar"/>
+
+</RelativeLayout>

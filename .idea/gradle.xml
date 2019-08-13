@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/cl" />
+            <option value="$PROJECT_DIR$/edittext" />
+            <option value="$PROJECT_DIR$/fioshd" />
+            <option value="$PROJECT_DIR$/myservicelx" />
+            <option value="$PROJECT_DIR$/san" />
+            <option value="$PROJECT_DIR$/suspensiondemo" />
+            <option value="$PROJECT_DIR$/wheelpicker" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
